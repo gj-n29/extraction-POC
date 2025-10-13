@@ -119,6 +119,10 @@ print("All done - results in results.md")
 ## Reformat extracted data
 ExtractedData = client.files.upload(file="results.md")
 
+## create json output file
+with open("results.json", "w") as f:
+    f.write("// Extracted Results from " + report_name + "\n\n")
+
 ## Company name, stock price, tickr, amnd recommendation in JSON format for easy import to a spreadsheet
 format_prompt = "Extract the company name, stock tickr, current stock price, and analysts recommendation represented in JSON format. Values should absolute, without scaling such as thousands or millions. Do not calculate or derive any data, just report what is in the document without any changes. Do not judge the content or the company performance."
 print(f"\nFormatting stock info")
@@ -128,6 +132,9 @@ json_data = client.models.generate_content(
     contents=[f"{format_prompt}", ExtractedData],
 )
 print(f"{json_data}")
+## add to json output file
+with open("results.json", "a") as f:
+    f.write(f"{json_data}\n")
 
 ## Revenue extraction in JSON format for easy import to a spreadsheet
 format_prompt = "Extract the sales revenue per year, the currency, and numeric values as columns in a table, represented in JSON format. Values should absolute, without scaling such as thousands or millions. Add a column to the table stating estimate or actual as appropriate for each row. Do not calculate or derive any data, just report what is in the document without any changes. Do not judge the content or the company performance."
@@ -138,6 +145,9 @@ json_data = client.models.generate_content(
     contents=[f"{format_prompt}", ExtractedData],
 )
 print(f"{json_data}")
+## add to json output file
+with open("results.json", "a") as f:
+    f.write(f"{json_data}\n")
 
 ## EPS extraction in JSON format for easy import to a spreadsheet
 format_prompt = "Extract the Earnings Per Share (EPS) per year, the currency, and numeric values as columns in a table, represented in JSON format. Values should absolute, without scaling such as thousands or millions. Add a column to the table stating estimate or actual as appropriate for each row. Do not calculate or derive any data, just report what is in the document without any changes."
@@ -148,3 +158,8 @@ json_data = client.models.generate_content(
     contents=[f"{format_prompt}", ExtractedData],
 )
 print(f"{json_data}")
+## add to json output file
+with open("results.json", "a") as f:
+    f.write(f"{json_data}\n")
+
+print("All formatted - results in results.json")
