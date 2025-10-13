@@ -8,7 +8,7 @@ import sys
 report_name = sys.argv[1]
 
 ## Google GenAI API key
-client = genai.Client(api_key="AIzaSyB1BWr0lc8snQThvzSz1_3P-ULSC7y-2hk")
+client = genai.Client(api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
 # extraction variables
 extract_prompt = {}
