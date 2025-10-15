@@ -3,12 +3,14 @@ from spire.pdf.common import *
 from spire.pdf import *
 from google import genai
 import sys
+import os
+
 
 # use commndline argument for pdf file name
 report_name = sys.argv[1]
 
 ## Google GenAI API key
-client = genai.Client(api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # extraction variables
 extract_prompt = {}
@@ -21,7 +23,7 @@ document_as_markdown = report_name + "\n\n"
 model = "gemini-2.0-flash"  ## model="gemini-2.5-flash",
 convert_prompt = "Faithfully convert this image of a page from a report into markdown format. Include all information, all tables, images, paragraphs, headings, footers and all other items. Do not calculate or derive any data, just report what is in the document without any changes. Do not judge the content or the company performance."
 
-extract_prompt_header = "You are a professional financial analyst reading a financial forecast report. Actual results are typically presented in tabular form under year headings indicating the year number or year and suffix 'A'.  Estimates of the future performance are suffixed 'E'.  Curremcy and multipliers are usually only shown once and apply to the whole document, and this is not always included near the data to which it pertains.  Ensure you show currency, svcaling, and units when providing answers"
+extract_prompt_header = "You are a professional financial analyst reading a financial forecast report. Actual results are typically presented in tabular form under year headings indicating the year number or year and suffix 'A'.  Estimates of the future performance are suffixed 'E'.  Curremcy and multipliers are usually only shown once and apply to the whole document, and this is not always included near the data to which it pertains.  Ensure you show currency, scaling, and units when providing answers.  Scaling can be included in the currency areviation usually with suffixes that include 'm' for millions eg millions of US Dollasrs are USDm, and millions of Indian Rupees are INRm"
 extract_prompt_footer = "Be concise and do not make up answers, and do not derive answers. It is acceptable to say data is not available if the item cannot be found in the report.  Indicate which section and page your answer was obtained from. I'll give you $1000 if you are entirely correct."
 extract_prompt[0] = (
     "Use use the report data to identify the company name and stock market tickr.  Also list the both current and target share price."
