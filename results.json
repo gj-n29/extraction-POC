@@ -1,0 +1,179 @@
+// Extracted Results from 100380191.pdf
+
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  avg_logprobs=-0.032656606586500145,
+  content=Content(
+    parts=[
+      Part(
+        text="""```json
+{
+  "company_name": "Novo Nordisk",
+  "stock_ticker_bloomberg": "NOVOB DC",
+  "stock_ticker_reuters": "NOVOb.CO",
+  "current_stock_price": 958.0,
+  "analyst_recommendation": "HOLD",
+  "target_price": 1150
+}
+```"""
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>
+)] create_time=None model_version='gemini-2.0-flash' prompt_feedback=None response_id='m97vaJC8Av2mkdUPhLfJ-Q4' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=87,
+  candidates_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=87
+    ),
+  ],
+  prompt_token_count=2056,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=2056
+    ),
+  ],
+  total_token_count=2143
+) automatic_function_calling_history=[] parsed=None
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  avg_logprobs=-0.0033999596827128933,
+  content=Content(
+    parts=[
+      Part(
+        text="""```json
+[
+  {
+    "year": 2020,
+    "sales_revenue": 126946000000,
+    "currency": "DKK",
+    "type": "actual"
+  },
+  {
+    "year": 2021,
+    "sales_revenue": 140800000000,
+    "currency": "DKK",
+    "type": "actual"
+  },
+  {
+    "year": 2022,
+    "sales_revenue": 176954000000,
+    "currency": "DKK",
+    "type": "actual"
+  },
+  {
+    "year": 2023,
+    "sales_revenue": 199753000000,
+    "currency": "DKK",
+    "type": "estimate"
+  },
+  {
+    "year": 2024,
+    "sales_revenue": 226936000000,
+    "currency": "DKK",
+    "type": "estimate"
+  },
+  {
+    "year": 2025,
+    "sales_revenue": 257572000000,
+    "currency": "DKK",
+    "type": "estimate"
+  }
+]
+```"""
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>
+)] create_time=None model_version='gemini-2.0-flash' prompt_feedback=None response_id='nN7vaIvoLv3NnsEP76jykA8' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=338,
+  candidates_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=338
+    ),
+  ],
+  prompt_token_count=2075,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=2075
+    ),
+  ],
+  total_token_count=2413
+) automatic_function_calling_history=[] parsed=None
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  avg_logprobs=-0.014190308801059065,
+  content=Content(
+    parts=[
+      Part(
+        text="""```json
+[
+  {
+    "Year": "2020",
+    "EPS": 18.0,
+    "Currency": "DKK",
+    "Estimate_Actual": "Actual"
+  },
+  {
+    "Year": "2021",
+    "EPS": 20.7,
+    "Currency": "DKK",
+    "Estimate_Actual": "Actual"
+  },
+  {
+    "Year": "2022",
+    "EPS": 24.4,
+    "Currency": "DKK",
+    "Estimate_Actual": "Actual"
+  },
+  {
+    "Year": "2023",
+    "EPS": 30.3,
+    "Currency": "DKK",
+    "Estimate_Actual": "Estimate"
+  },
+  {
+    "Year": "2024",
+    "EPS": 33.6,
+    "Currency": "DKK",
+    "Estimate_Actual": "Estimate"
+  },
+  {
+    "Year": "2025",
+    "EPS": 39.8,
+    "Currency": "DKK",
+    "Estimate_Actual": "Estimate"
+  }
+]
+```"""
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>
+)] create_time=None model_version='gemini-2.0-flash' prompt_feedback=None response_id='oN7vaMCEDYC5nsEPkfuPsQ8' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=290,
+  candidates_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=290
+    ),
+  ],
+  prompt_token_count=2069,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=2069
+    ),
+  ],
+  total_token_count=2359
+) automatic_function_calling_history=[] parsed=None
